@@ -10,9 +10,9 @@ body {
 }
 
 .container {
-    height: 800px;
+    height: 90vh;
     width: 90%;
-    background: #8b218f;
+    background: #791d7c;
     margin: 50px auto;
     box-shadow: -10px 10px 20px 10px #8b6399;
     padding: 10px;
@@ -21,7 +21,7 @@ body {
 
  h1 {
     color: #ece7e7;
-    font-weight: 300;
+    font-weight: 350;
     text-align: center;
     margin: 20px auto;
     box-shadow: -4px 4px 15px 4px #51205c;
@@ -30,14 +30,16 @@ body {
     padding: 10px;
 }
 
-h1::after {
+.gallery::before {
     background: #ece7e7;
     box-shadow: -2px 2px 15px 4px #51205c;
     width: 100%;
     content: '';
     height: 6px;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
     display: block;
+    border-radius: 20px;
 }
 
 .gallery {
@@ -48,12 +50,21 @@ h1::after {
 
 .gallery img {   
     width: 0;
-    height: 200px;
-    flex-basis: 30%;
+    height: 300px;
+    flex-basis: 26%;
     margin: 15px 0;
     object-fit: cover;
-    box-shadow: -5px 5px 15px 4px #140318;
-    border-radius: 10px 60px 10px 60px;
+    box-shadow: -6px 6px 15px 4px #300c38;
+    border-radius: 10px 80px 10px 80px;
+    transition: 650ms;
+    opacity: .8;
+}
+
+.gallery img:hover {   
+    height: 300px;
+    box-shadow: -10px 10px 15px 4px #0d0d0e;
+    cursor: pointer;
+    opacity: 1;
 }
 
 @media screen and (max-width: 800px) {
